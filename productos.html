@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Sperutours - Admin</title>
+  <!--  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body ><!--class="sb-nav-fixed"-->
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="#">Sperutours</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <!-- <div class="sb-sidenav-menu-heading">Core</div>
+                         <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a> -->
+
+                        <!-- SECCION - INICIO -->
+                        <!--  <div class="sb-sidenav-menu-heading">Inventario</div> -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Inventario
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="productos.html">Productos</a>
+                                <a class="nav-link" href="#">Extras</a>
+                                <a class="nav-link" href="#">Categorías</a>
+                                <a class="nav-link" href="#">Recursos</a>
+                                <a class="nav-link" href="#">Vales</a>
+                                <a class="nav-link" href="#">Códigos promocionales</a>
+                                <a class="nav-link" href="#">Proveedores</a>
+
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+                                <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+                                <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
+                              </svg></div>
+                            Tareas
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <!--   <a class="nav-link" href="layout-static.html">Productos</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Extras</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Categorías</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Recursos</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Vales</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Códigos promocionales</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Proveedores</a>
+ -->
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                              </svg></div>
+                            Pedidos
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <!--   <a class="nav-link" href="layout-static.html">Productos</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Extras</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Categorías</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Recursos</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Vales</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Códigos promocionales</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Proveedores</a>
+ -->
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                              </svg></div>
+                            Clientes
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+
+
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+                                <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
+                              </svg></div>
+                            Agentes
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                              </svg></div>
+                            Calendario
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Reportes
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+
+                        <!-- SECCION - INICIO -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                                <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                              </svg></div>
+                            Configuracion
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+
+                            </nav>
+                        </div>
+                        <!--  SECCION - FIN -->
+
+
+
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <!--  <div class="small">Logged in as:</div>
+                    Start Bootstrap -->
+                </div>
+            </nav>
+          </div>
+          <div id="layoutSidenav_content">
+            <main class="m-2 justify-center">
+<div class="col col-12">
+<!-- container -->
+<div class="card-header bg-dark    ">
+         <div class="row ">
+           <div class="col col-12">
+             <div class="row">
+             <div class="col col-9  text-light mt-1">
+              <h2 > Productos </h2> <h6>0 resultados</h6>
+              </div>
+              <div class="col text-sm-end ">
+                   <!-- boton-nuevo - inicio -->
+               <div class="   ">
+                <button type="submit" class="btn btn-info btn-sm-lg    d-sm-none   mt-2  ">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                    <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                    <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                </button>
+                <button type="submit" class="btn btn-info   d-none  d-sm-inline  btn-lg      ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                    <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                    <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+
+                </button>
+
+
+              </div>
+               <!-- boton-nuevo - fin -->
+              </div>
+              </div>
+          </div>
+           
+           <div class="col col-12 col-md-5   ">
+             <div class="row align-content-between">
+               
+               <div class="col col-9  col-sm-12 form-outline ">
+                 <input type="text" id="form3" class="form-control form-control-lg  " placeholder="Nombre / código / región" />
+
+               </div>
+               <!-- boton elimacion de texto - inicio -->
+               <div class="col col-2   ">
+                 <button type="submit" class="btn btn-danger d-sm-none  "> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                 </svg>
+                 </button>
+                  
+               </div>
+               <!-- boton elimacion de texto - fin -->
+           </div>
+           </div>
+           <div class="col  col-sm-12 col-md-7 col-lg-7   py-1 d-inline text-md-end">
+             <div class="row    ">
+               <div class="col col-9 col-sm-10 col-md-5  col-lg-5 ">
+                 <select class="form-select form-select-lg mb-0 "         >
+                 <option selected value="ALL">TODOS</option>
+                 <option value="20">FULL DAY </option>
+                 <option value="50">VARIOS DIAS </option>
+                 <option value="100">PAQUETE </option>
+                 <option value="100">EXCURSION </option>
+                 </select>
+               </div>
+               <div class="col col-9 col-sm-10 col-md-5 col-lg-5 mt-1 mt-sm-0 ">
+                 <select class="form-select form-select-lg mb-0"       >
+                 <option selected value="ALL">ACTIVO</option>
+                 <option value="20">INACTIVO </option>
+                 <option value="50">APROBADOS </option>
+                 <option value="100">EN PROCESO </option>
+                 <option value="100">TODOS </option>
+                 </select>
+               </div>
+
+
+              <!-- boton-busqueda - inicio -->
+               <div class="col  col-sm-2   ">
+                 <button type="submit" class="btn btn-success btn-sm-lg    d-sm-none   text-start text-sm-center  ">
+
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                   </svg>
+                 </button>
+                 <button type="submit" class="btn btn-success   d-none  d-sm-inline  btn-lg   text-start text-sm-center    ">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                   </svg>
+
+                 </button>
+
+
+               </div>
+                <!-- boton-busqueda - fin -->
+
+             </div>
+           </div>
+
+           <hr class="bg-secondary my-2 fs-3" size="4" >
+           <!-- card participante - inicio -->
+           <div class="card   col-12 col-sm-11  mx-auto  mt-1  " >
+             <div class="row g-0">
+               <!-- SECCION - INICIO -->
+               <div class="col-md-4 mt-2    ">
+                 <div class="card-title m-2 text-center"> <h6 class="card-title m-2"><b class="t-2">PUNO001</b> - PUNO TOTAL Lorem ipsum dolor sit amet consectetur adipisicing. </h6></div>
+                
+                 <div class=" rounded p-2 text-light justify-content-center fw-bold text-center" style="background-color: #000;"> TOUR DE VARIOS DÍAS </div>
+                 <div class="row   m-2">
+                 <img class="img img-fluid col-8 col-md-6 col-lg-8 mx-auto border-dark  rounded   " src="https://www.peru.travel/Contenido/Destino/Imagen/pe/37/1.3/Principal/Los%20Uros.jpg"></img></div>
+               </div>
+             <!-- SECCION - FIN -->
+             <!-- SECCION - INICIO -->
+               <div class="col-md-4">
+                 <div class="card-body">
+                   <!--
+                   <h5 class="card-title">UBICACIÓN</h5>
+                 -->
+                   <p class="card-text text-center m-2 ">
+                     <h6 class="text-warning">Estado : PENDIENTE </h6>
+                    <small class="card-title text-black-50">Fecha de inicio : 2022/04/17</small><br>
+                    <small class="card-title text-black-50">Fecha de fin : 2022/04/20</small><br>
+                    <small class="card-title  fw-bold text-success ">Disponibilidad :  disponible hasta el 2022/04/10</small>
+                     <!-- tabla ubicacion - inicio -->
+
+                 <!--     <table class="table  table-striped">
+                       <thead class="table-dark">
+                         <tr>
+
+                           <th scope="col col-9">UBICACIÓN</th>
+                           <th scope="col col-3">CHECK</th>
+
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+
+                           <td>ZONA -ZONA 1</td>
+                           <td class="text-center">
+
+                             <div class="form-check ">
+                               <div class="row  d-flex ">
+                                 <div class="col justify-content-center">
+                                   <input class="form-check-input"  style="width: 3rem; height: 3rem;" type="checkbox" value="" checked  id="flexCheckDefault">
+
+
+                                 </div>
+                               </div>
+
+
+                           </div>
+                            <div class="sm">
+                              <small>
+                              20/03/2022<br>
+                               21:35 h </small>
+                           </div>
+                         </td>
+                         </tr>
+                         <tr>
+
+                           <td> ALMUERZO MESA 1</td>
+                           <td>
+
+                             <div class="form-check">
+                             <input class="form-check-input" type="checkbox"style="width: 3rem; height: 3rem;" value="" id="flexCheckDefault">
+                             <label class="form-check-label" for="flexCheckDefault">
+
+                             </label>
+                           </div></td>
+                         </tr>
+                         <tr>
+
+                           <td> CENA TERRAZA - MESA - 3</td>
+                           <td>
+
+                             <div class="form-check">
+                             <input class="form-check-input" type="checkbox" style="width: 3rem; height: 3rem;"value="" id="flexCheckDefault">
+                             <label class="form-check-label" for="flexCheckDefault">
+
+                             </label>
+                           </div>
+                         </td>
+                         </tr>
+
+                       </tbody>
+                     </table> -->
+                     <!-- tabla ubicacion - fin -->
+
+
+
+                   </p>
+
+                 </div>
+               </div>
+             <!-- SECCION - FIN -->
+             <!-- SECCION - INICIO -->
+               <div class="col-md-4">
+                 <div class="card-body">
+                   <div class="row"><h6 class="card-title text-bold text-black ">Descripción :</h6><br>
+                    <small class="card-title text-black-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</small></div>
+                  <div class="row d-grid gap-2">
+                    <button class="btn btn-success" type="button">CLONAR</button>
+                    <button class="btn btn-warning" type="button">EDITAR</button>
+                   <!--  <div class="col col-6 text-center"><button class="btn btn-success d-block large">EDITAR</button></div>
+                    <div class="col col-6 text-center"><button class="btn btn-warning">CLONAR</button></div> -->
+                  </div>
+
+                 <!--   <div class="row mt-2">
+                     <div class="d-grid gap-2">
+                      <div class="col col-6"></div>
+                      <div class="col col-6"></div>
+                       <button class="btn btn-success" type="button">
+                         <svg   width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                           <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                           <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                         </svg>
+                          REGISTRAR INVITADO</button>
+                          
+                       <button class="btn btn-primary" type="button">
+                          
+
+                         <svg  width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                           <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                           <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+                         </svg>
+
+                         IMPRIMIR CREDENCIAL</button>
+                         
+
+                       <button class="btn btn-info" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                         <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                         <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                       </svg>ASISTENCIA</button> 
+                     </div>
+
+                   </div>
+
+                    <div class="row">
+                     <div class="col">
+                       <small class="text-muted">20/03/2022 </small>
+                     </div>
+                     <div class="col">
+                       <small class="text-muted"> 10:52 h</small>
+                     </div>
+                   </div>   -->
+
+
+                 </div>
+               </div>
+             <!-- SECCION - FIN -->
+
+
+             </div>
+           </div>
+           <!-- card participante - fin  -->
+
+ <!-- card participante - inicio -->
+ <div class="card   col-12 col-sm-11  mx-auto  mt-1  " >
+  <div class="row g-0">
+    <!-- SECCION - INICIO -->
+    <div class="col-md-4 mt-2    ">
+      <div class="card-title m-2 text-center"> <h6 class="card-title m-2"><b class="t-2">PUNO002</b> - PUNO BÁSICO Lorem ipsum dolor sit amet consectetur adipisicing. </h6></div>
+     
+      <div class=" rounded p-2 text-light justify-content-center fw-bold text-center bg-secondary" > FULL DAY </div>
+      <div class="row   m-2">
+      <img class="img img-fluid col-8 col-md-6 col-lg-8 mx-auto border-dark  rounded   " src="https://portal.andina.pe/EDPfotografia3/Thumbnail/2020/11/03/000723678W.jpg"></img></div>
+    </div>
+  <!-- SECCION - FIN -->
+  <!-- SECCION - INICIO -->
+    <div class="col-md-4">
+      <div class="card-body">
+        
+        <p class="card-text text-center m-2 ">
+          <h6 class="text-success">Estado : APROBADO</h6>
+        <!--  <small class="card-title text-black-50">Fecha de inicio : 2022/04/09</small><br>
+         <small class="card-title text-black-50">Fecha de fin : 2022/04/09</small><br> -->
+        
+          
+         <table class="table mt-1">
+        <!--   <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+               
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <th scope="row">Fecha de inicio :</th>
+              <td>2022/04/09</td>
+               
+            </tr>
+            <tr>
+              <th scope="row">Fecha de fin :</th>
+              <td>2022/04/09</td>
+               
+            </tr>
+        
+          </tbody>
+        </table>
+
+        <small class="card-title  fw-bold text-success ">Disponibilidad :  disponible hasta el 2022/04/10</small>
+
+        </p>
+
+      </div>
+    </div>
+  <!-- SECCION - FIN -->
+  <!-- SECCION - INICIO -->
+    <div class="col-md-4">
+      <div class="card-body">
+        <div class="row"><h6 class="card-title text-bold text-black ">Descripción :</h6><br>
+         <small class="card-title text-black-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</small></div>
+       <div class="row d-grid gap-2">
+         <button class="btn btn-success" type="button">CLONAR</button>
+         <button class="btn btn-warning" type="button">EDITAR</button>
+       
+       </div>
+ 
+
+
+      </div>
+    </div>
+  <!-- SECCION - FIN -->
+
+
+  </div>
+</div>
+<!-- card participante - fin  -->
+           
+
+
+
+<!-- card participante - inicio -->
+<div class="card   col-12 col-sm-11  mx-auto  mt-1  " >
+  <div class="row g-0">
+    <!-- SECCION - INICIO -->
+    <div class="col-md-4 mt-2    ">
+      <div class="card-title m-2 text-center"> <h6 class="card-title m-2"><b class="t-2">PUNO003</b> - PUNO 2 días - Lorem ipsum dolor sit amet consectetur adipisicing. </h6></div>
+     
+      <div class=" rounded p-2 text-light justify-content-center fw-bold text-center bg-dark" > TOUR DE VARIOS DÍAS </div>
+      <div class="row   m-2">
+      <img class="img img-fluid col-8 col-md-6 col-lg-8 mx-auto border-dark  rounded   " src="https://magiccuscotoursperu.com/wp-content/uploads/2020/02/Tour-puno-completo.jpg"></img></div>
+    </div>
+  <!-- SECCION - FIN -->
+  <!-- SECCION - INICIO -->
+    <div class="col-md-4">
+      <div class="card-body">
+        
+        <p class="card-text text-center m-2 ">
+          <h6 class="text-info">Estado : PROPUESTA</h6>
+        <!--  <small class="card-title text-black-50">Fecha de inicio : 2022/04/09</small><br>
+         <small class="card-title text-black-50">Fecha de fin : 2022/04/09</small><br> -->
+        
+          
+         <table class="table mt-1">
+        <!--   <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+               
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <th scope="row">Fecha de inicio :</th>
+              <td>2022/05/03</td>
+               
+            </tr>
+            <tr>
+              <th scope="row">Fecha de fin :</th>
+              <td>2022/05/09</td>
+               
+            </tr>
+        
+          </tbody>
+        </table>
+
+        <small class="card-title  fw-bold text-danger ">Disponibilidad :  NO DISPONIBLE</small>
+
+        </p>
+
+      </div>
+    </div>
+  <!-- SECCION - FIN -->
+  <!-- SECCION - INICIO -->
+    <div class="col-md-4">
+      <div class="card-body">
+        <div class="row"><h6 class="card-title text-bold text-black ">Descripción :</h6><br>
+         <small class="card-title text-black-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</small></div>
+       <div class="row d-grid gap-2">
+         <button class="btn btn-success" type="button">CLONAR</button>
+         <button class="btn btn-warning" type="button">EDITAR</button>
+       
+       </div>
+ 
+
+
+      </div>
+    </div>
+  <!-- SECCION - FIN -->
+
+
+  </div>
+</div>
+<!-- card participante - fin  -->
+           
+
+
+
+
+         </div>
+         </div>
+</div>
+<!--container - fin -->
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div>
+                            <a href="#">Privacy Policy</a> &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+
+</html>
