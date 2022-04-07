@@ -11,6 +11,11 @@
   <!--  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- datapicker - inicio -->
+    <link rel="stylesheet" type="text/css" href="./dt/css/datepicker-bs5.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <!-- datapicker - fin -->
 </head>
 
 <body ><!--class="sb-nav-fixed"-->
@@ -211,154 +216,137 @@
               
               </div>
           </div>
-           
-           <div class="col col-12 col-md-5   ">
+        </div>
+        <div class="row">
+           <div class="col col-12 col-md-6   ">
              <div class="row align-content-between">
-               
-               <div class="col col-9  py-1   col-sm-12 form  ">
-                 <input type="text" id="form3" class="form-control form-control-lg  " placeholder="Nombre / código / región" />
-
-               </div>
-               <!-- boton elimacion de texto - inicio -->
-               <div class="col col-2   ">
-                 <button type="submit" class="btn btn-danger d-sm-none  "> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                 </svg>
-                 </button>
-                  
-               </div>
-               <!-- boton elimacion de texto - fin -->
+              <div class="form-floating mb-3">
+                <input type="input" class="form-control" id="floatingInput" placeholder="Nombre del paquete">
+                <label for="floatingInput" class="ms-1"> Nombre del paquete</label>
+              </div>
+                
+                 
            </div>
            </div>
-           <div class="col  col-sm-12 col-md-7 col-lg-7   py-1 d-inline text-md-end">
-             <div class="row    ">
-               <div class="col col-9 col-sm-10 col-md-5  col-lg-5 ">
-                 <select class="form-select form-select-lg mb-0 "         >
-                 <option selected value="ALL">TODOS</option>
-                 <option value="20">FULL DAY </option>
-                 <option value="50">VARIOS DIAS </option>
-                 <option value="100">PAQUETE </option>
-                 <option value="100">EXCURSION </option>
-                 </select>
-               </div>
-               <div class="col col-9 col-sm-10 col-md-5 col-lg-5 mt-1 mt-sm-0 ">
-                 <select class="form-select form-select-lg mb-0"       >
-                 <option selected value="ALL">ACTIVO</option>
-                 <option value="20">INACTIVO </option>
-                 <option value="50">APROBADOS </option>
-                 <option value="100">EN PROCESO </option>
-                 <option value="100">TODOS </option>
-                 </select>
-               </div>
-
-
-              <!-- boton-busqueda - inicio -->
-               <div class="col  col-sm-2   ">
-                 <button type="submit" class="btn btn-success btn-sm-lg    d-sm-none   text-start text-sm-center  ">
-
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                   </svg>
-                 </button>
-                 <button type="submit" class="btn btn-success   d-none  d-sm-inline  btn-lg   text-start text-sm-center    ">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                   </svg>
-
-                 </button>
-
-
-               </div>
-                <!-- boton-busqueda - fin -->
-
+           
+           <div class="col  col-9 col-sm-10 col-md-4 col-lg-4     d-inline text-md-end ">
+            <div class="row align-content-between">
+             <div class="form-floating mb-3">
+               <input type="input" class="form-control" id="floatingInput" placeholder="Código único">
+               <label for="floatingInput" class="ms-1">Código único</label>
              </div>
-           </div>
-
-           <hr class="bg-secondary my-2 fs-3" size="4" >
-          
-
-<!-- card participante - inicio -->
-<div class="card   col-12 col-sm-11  mx-auto  mt-1  " >
-  <div class="row g-0">
-    <!-- SECCION - INICIO -->
-    <div class="col-md-4 mt-2    ">
-      <div class="card-title m-2 text-center"> <h6 class="card-title m-2"><b class="t-2">PUNO003</b> - PUNO 2 días - Lorem ipsum dolor sit amet consectetur adipisicing. </h6></div>
-     
-      <div class=" rounded p-2 text-light justify-content-center fw-bold text-center bg-dark" > TOUR DE VARIOS DÍAS </div>
-      <div class="row   m-2">
-      <img class="img img-fluid col-8 col-md-6 col-lg-8 mx-auto border-dark  rounded   " src="https://magiccuscotoursperu.com/wp-content/uploads/2020/02/Tour-puno-completo.jpg"></img></div>
-    </div>
-  <!-- SECCION - FIN -->
-  <!-- SECCION - INICIO -->
-    <div class="col-md-4">
-      <div class="card-body">
-        
-        <p class="card-text text-center m-2 ">
-          <h6 class="text-info">Estado : PROPUESTA</h6>
-        <!--  <small class="card-title text-black-50">Fecha de inicio : 2022/04/09</small><br>
-         <small class="card-title text-black-50">Fecha de fin : 2022/04/09</small><br> -->
-        
-          
-         <table class="table mt-1">
-        <!--   <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
                
-            </tr>
-          </thead> -->
-          <tbody>
-            <tr>
-              <th scope="row">Fecha de inicio :</th>
-              <td>2022/05/03</td>
-               
-            </tr>
-            <tr>
-              <th scope="row">Fecha de fin :</th>
-              <td>2022/05/09</td>
-               
-            </tr>
-        
-          </tbody>
-        </table>
+                
+            </div>
+          </div>
+          <!-- boton-busqueda - inicio -->
+          <div class="col  col-sm-2   ">
+            <button type="submit" class="btn btn-secondary btn-sm-lg    d-sm-none   text-start text-sm-center  ">
 
-        <small class="card-title  fw-bold text-danger ">Disponibilidad :  NO DISPONIBLE</small>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+              </svg>
+            </button>
+            <button type="submit" class="btn btn-success   d-none  d-sm-inline  btn-lg    text-end text-sm-center    ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+              </svg>
 
-        </p>
+            </button>
 
-      </div>
-    </div>
-  <!-- SECCION - FIN -->
-  <!-- SECCION - INICIO -->
-    <div class="col-md-4">
-      <div class="card-body">
-        <div class="row"><h6 class="card-title text-bold text-black ">Descripción :</h6><br>
-         <small class="card-title text-black-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</small></div>
-       <div class="row d-grid gap-2">
-         <button class="btn btn-success" type="button">CLONAR</button>
-         <button class="btn btn-warning" type="button">EDITAR</button>
+
+          </div>
+          <!-- boton-busqueda - fin -->
+        </div>
+
        
-       </div>
+               
+
  
+   
+      <!-- datepicker- inicio -->
+      
+      
+      <div class="row" id="range">
+        <div class="col col-6">
 
-
+          <div class="input-group  ">
+        <i class="bi   input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+          <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>&nbsp Fecha de Inicio : </i>
+        <input type="text" name="start"   class="datepicker_input form-control" placeholder="dd/mm/yyyy" required aria-label="Fecha de fin"/></div>
+        </div>
+        <div class="col col-6">
+          <div class="input-group  ">
+        <i class="bi   input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+          <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>&nbsp Fecha de Fin :&nbsp&nbsp&nbsp&nbsp </i>
+        <input type="text" name="end"   class="datepicker_input form-control" placeholder="dd/mm/yyyy" required aria-label="Fecha de fin"/></div>
       </div>
-    </div>
-  <!-- SECCION - FIN -->
 
+        </div>
+        
+        <!-- <span>to</span> -->
+
+        
+    
+    <!-- datapicker - requerido -->
+          <input class="d-none"  type="text" name="datepicker"/>
+          <div class="d-none" id="inline" data-date="01/05/2020"></div>
+
+          <script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof __ez_fad_position != 'undefined'){__ez_fad_position('div-gpt-ad-cssscript_com-box-2-0')};
+          </script>
+    <!-- datapicker - requerido - fin -->
+
+   
+
+    <!-- datepicker-fin -->
+
+   
+
+  <div class="row">
 
   </div>
-</div>
-<!-- card participante - fin  -->
+
+          
+
+          
            
-
-
-
-
-         </div>
-         </div>
+         </div><!-- fin del card del container -->
+         
 </div>
+
 <!--container - fin -->
+
+ <hr class="bg-secondary my-2 fs-3" size="4" >
+
+  <!-- datepicker - inicio --> 
+  <script src="/dt/js/datepicker-full.js"></script>
+    
+  <script>
+    const elem1 = document.querySelector('input[name="datepicker"]');
+  const datepicker1 = new Datepicker(elem1, {
+    buttonClass: 'btn',
+  });
+  const elem2 = document.getElementById('inline');
+  const datepicker2 = new Datepicker(elem2, {
+    buttonClass: 'btn',
+  });
+  const elem3 = document.getElementById('range');
+  const datepicker3 = new DateRangePicker(elem3, {
+    buttonClass: 'btn',
+  });
+  
+  </script> 
+  <!-- datepicker - fin --> 
+
+
+
+
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">

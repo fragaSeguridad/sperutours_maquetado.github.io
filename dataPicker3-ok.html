@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vanilla JS Datepicker Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./dt/css/datepicker-bs5.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+ 
+ 
+  </head>
+  
+<body> 
+    <div class="container" style="margin:150px auto">
+      <h1>Vanilla Date &amp; Date Range Picker Examples</h1><span class="ezoic-autoinsert-ad ezoic-top_of_page"></span><span style="clear:both; display:block" id="ez-clearholder-box-2"></span><span class="ezoic-ad box-2 box-2220 adtester-container adtester-container-220" data-ez-name="cssscript_com-box-2"><span id="div-gpt-ad-cssscript_com-box-2-0" ezaw="300" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof __ez_fad_position != 'undefined'){__ez_fad_position('div-gpt-ad-cssscript_com-box-2-0')};</script></span></span>
+      <h2>Date Picker</h2>
+      <input type="text" name="datepicker"/>
+      <h2>Inline Date Picker</h2>
+      <div id="inline" data-date="01/05/2020"></div>
+      <h2>Date Range Picker</h2>
+      <div id="range">
+    <input type="text" name="start"/>
+    <span>to</span>
+    <input type="text" name="end"/>
+  </div>
+    </div>
+  <!-- datepicker - inicio --> 
+  <script src="/dt/js/datepicker-full.js"></script>
+    
+  <script>
+    const elem1 = document.querySelector('input[name="datepicker"]');
+  const datepicker1 = new Datepicker(elem1, {
+    buttonClass: 'btn',
+  });
+  const elem2 = document.getElementById('inline');
+  const datepicker2 = new Datepicker(elem2, {
+    buttonClass: 'btn',
+  });
+  const elem3 = document.getElementById('range');
+  const datepicker3 = new DateRangePicker(elem3, {
+    buttonClass: 'btn',
+  });
+  
+  </script> 
+  <!-- datepicker - fin --> 
+
+
+  
+<!--   <script>
+  try {
+    fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+      return true;
+    }).catch(function(e) {
+      var carbonScript = document.createElement("script");
+      carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+      carbonScript.id = "_carbonads_js";
+      document.getElementById("carbon-block").appendChild(carbonScript);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  </script> -->
+<!--   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
+  
+  </script> -->
+  
+  
+  <!--[selectrongo:done]-->
+  <!-- 
+  <script type="text/javascript">
+                  var __inScopeForCCPA = false;
+          function __uspapi(command, version, callback) {
+              var response = null;
+              var successs = false;
+              if (command === "getUSPData" && version === 1) {
+                  var uspString = "1"; // Version
+                  if (__inScopeForCCPA) {
+                      uspString += "Y"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+                      var result;
+                      var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+                      if (consentCookie === "nonconsent") {
+                          uspString += "Y";
+                      }
+                      else {
+                          uspString += "N";
+                      }
+                      uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+                  }
+                  else {
+                      uspString += "---";
+                  }
+                  response = {
+                      uspString: uspString,
+                      version: 1
+                  };
+                  success = true;
+              }
+              return callback(response, success);
+          };
+          function __receiveUspapiMessage(event) {
+              if (event.data.hasOwnProperty('__uspapiCall')) {
+                  __uspapi('getUSPData', 1, function(uspData, success) {
+                      event.source.postMessage({
+                          __uspapiReturn: {
+                              returnValue: uspData,
+                              success: success,
+                              callId: event.data.__uspapiCall.callId
+                          }
+                      },
+                      event.origin);
+                  });
+              }
+              return null;
+          };
+          window.addEventListener("message", __receiveUspapiMessage, false);
+  </script>
+ -->
+
+
+  <!-- 
+  <script>function __ez_fad_ezpbinit(){var s = document.createElement( 'script' );
+      s.setAttribute( 'src', '//go.ezodn.com/hb/dall.js?b=adyoulike,amx,criteo,oftmedia,onemobile,pubmatic,sharethrough,smilewanted,yahoossp,yieldmo&cb=195-0-37' );
+      s.onerror = function () {window.ezDallErr = true};
+      document.body.appendChild( s );}var epbjs=epbjs||{};epbjs.que=epbjs.que||[];epbjs.bidderTimeout=2500;epbjs.useAdj=true;epbjs.SS={"adyoulike":11314,"amx":11290,"criteo":10050,"oftmedia":10081,"onemobile":11293,"pubmatic":10061,"sharethrough":11309,"smilewanted":11313,"yahoossp":11318,"yieldmo":11315};epbjs.bidders=['adyoulike,amx,criteo,oftmedia,onemobile,pubmatic,sharethrough,smilewanted,yahoossp,yieldmo'];epbjs.que.push(function(){epbjs.aliasBidder('appnexus', 'oftmedia');});epbjs.bidderSettings={'criteo': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'amx': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'adyoulike': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'oftmedia': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.850000; var adj2 = adj1 * 1.000000; return adj2; }},'yieldmo': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'onemobile': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'smilewanted': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'pubmatic': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'yahoossp': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},'sharethrough': { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.000000; return adj2; }},};epbjs.gadj=1.000000;var __enableAnalytics=false;
+  var __s2sbidders=['amx'];
+  var __allBidders=['criteo','amx','adyoulike','oftmedia','yieldmo','onemobile','smilewanted','pubmatic','yahoossp','sharethrough'];
+  __ez.queue.addFile('/detroitchicago/houston.js', '/detroitchicago/houston.js?gcb=0&cb=16', false, [], true, false, true, false);__ez.queue.addFunc("epbjsRequestAdUnits", "epbjsRequestAdUnits", [[{code: 'div-gpt-ad-cssscript_com-box-2-0', mediaTypes: {banner: { sizes:[[300,250]] }}, bids: [{bidder: 'criteo', params: { networkId: '7987' }},{bidder: 'amx', params: { tagId: 'ZXpvaWMtc2VydmVyLXNpZGUuY29t' }},{bidder: 'oftmedia', params:{ placementId: '19594005', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},{bidder: 'yieldmo', params: { placementId: '2834942196124164132' }},{bidder: 'smilewanted', params: { zoneId: 'ezoic.com_hb_display' }},{bidder: 'pubmatic', params:{ publisherId: '156983', adSlot: 'e_top_of_page_300x250' }},{bidder: 'sharethrough', params: { pkey: 'ZuLKhEvL3Xpyu8vcJZvy4GGZ' }}] }]], false, ['/detroitchicago/houston.js'], true, true, true, true);</script>
+  <script>var __ez_tkn_evnt = function() { if(typeof(_ezaq) != 'undefined'){if(typeof window.ezogtk !== "undefined" && window.ezogtk !== "") {__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("ext_user_hash",window.ezogtk)]);}}};document.addEventListener("DOMContentLoaded", __ez.queue.addFunc("__ez_tkn_evnt", "__ez_tkn_evnt", event, false, ['/detroitchicago/minneapolis.js','/detroitchicago/memphis.js'], true, true, false, true));</script>
+  <script async data-ezscrex="false">__ez_fad_load(0,0);__ez_fad_doc_ht=__ez_fad_docht();__ez_fad_vp_ht=__ez_fad_vpht();function __ez_fad_scroll(){return window.pageYOffset||(document.documentElement||document.body.parentNode||document.body).scrollTop}
+  var __ez_fad_scrollmon=function(){var sy=__ez_fad_scroll();var isShortPage=__ez_fad_doc_ht<=(__ez_fad_vh+100);var bot=(__ez_fad_vp_ht+sy);var botThresh=bot+__ez_fad_vp_ht;for(var divid in __ez_fad_divpos){if(__ez_fad_fastdiv.indexOf(divid)!=-1){continue;}
+  var divPos=__ez_fad_divpos[divid];if(divPos>0&&divPos>sy&&divPos<(sy+__ez_fad_vp_ht*.5)){if(typeof __ez_fad_instaslots[divid]=='function'){__ez_fad_instaslots[divid]();}}else if(divPos>0&&divPos>sy&&divPos<(sy+__ez_fad_vp_ht)){if(typeof __ez_fad_viewslots[divid]=='function'){__ez_fad_viewslots[divid]();}}}
+  __ez_fad_chkpos();if(ezslit_run[0]!==true){__ez_fad_load(0,0);}
+  if((sy>0||isShortPage)&&ezslit_run[1]!=true){__ez_fad_load(1,null);__ez_fad_load(5,null);}
+  if((sy>100||isShortPage)&&ezslit_run[2]!=true){__ez_fad_load(2,null);}
+  if(sy>(__ez_fad_vp_ht*.75)&&ezslit_run[3]!=true){__ez_fad_load(3,null);}
+  if(document.readyState==="complete"&&!__ez_fad_floatshowd&&typeof __ez_fad_floating!=='undefined'&&__ez_fad_floating.length>0&&__ez_fad_count===0){setTimeout(googletag.cmd.push(function(){__ez_fad_floatshow()}),500);}
+  if(ezslit_run[1]==true&&ezslit_run[2]==true&&ezslit_run[3]==true){}else{setTimeout(__ez_fad_scrollmon,500);}};__ez_fad_scrollmon();function __ez_fad_chkpos(){if(typeof __ez_fad_divs[4]!='undefined'){for(var i=0;i<__ez_fad_divs[4].length;i++){var id=__ez_fad_divs[4][i];__ez_fad_divs[4][i]=null;__ez_fad_position([id]);}}}</script>
+  
+          <script>setTimeout(function(){if(typeof ezslot_interstitial==="undefined"){return;}
+  googletag.cmd.push(function(){googletag.display(ezslot_interstitial);});googletag.cmd.push(function(){googletag.pubads().refresh([ezslot_interstitial]);});},1000);</script>
+  <script type="text/javascript">(function(f,a){function g(b,a,c){b.addEventListener?b.addEventListener(a,c):b.attachEvent("on"+a,function(){c.call(b)})}function k(b){b&&("string"==typeof b["class"]&&b["class"]&&a.getElementById("uglipop_popbox").setAttribute("class",b["class"]),b.keepLayout&&!b["class"]&&a.getElementById("uglipop_popbox").setAttribute("style","position:relative;height:300px;width:300px;background-color:white;opacity:1;"),"string"==typeof b.content&&b.content&&"html"==b.source&&(a.getElementById("uglipop_popbox").innerHTML=b.content),"string"==typeof b.content&&b.content&&"div"==b.source&&(a.getElementById("uglipop_popbox").innerHTML=a.getElementById(b.content).innerHTML));a.getElementById("uglipop_overlay_wrapper").style.display="";a.getElementById("uglipop_overlay").style.display="";a.getElementById("uglipop_content_fixed").style.display=""}function h(){a.getElementById("uglipop_overlay_wrapper").style.display="none";a.getElementById("uglipop_overlay").style.display="none";a.getElementById("uglipop_content_fixed").style.display="none"}g(a,"DOMContentLoaded",function(){var b=a.createElement("div"),e=a.createElement("div"),c=a.createElement("div"),d=a.createElement("div");e.id="uglipop_content_fixed";e.setAttribute("style","position:fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);opacity:1;z-index:10000000;");c.id="uglipop_popbox";d.id="uglipop_overlay_wrapper";d.setAttribute("style","position:absolute;top:0;bottom:0;left:0;right:0;display:none");b.id="uglipop_overlay";b.setAttribute("style","position:fixed;top:0;bottom:0;left:0;right:0;opacity:0.3;width:100%;height:100%;background-color:black;");d.appendChild(b);e.appendChild(c);a.body.appendChild(d);a.body.appendChild(e);a.getElementById("uglipop_overlay_wrapper").style.display="none";a.getElementById("uglipop_overlay").style.display="none";a.getElementById("uglipop_content_fixed").style.display="none";d.addEventListener("click",h);g(f,"keydown",function(a){27==a.keyCode&&h()});f.uglipop=k})})(window,document);var ezRBA=(function(){function init(){var reportAdsBtns=document.querySelectorAll('.ez-report-ad-button');for(var i=0;i<reportAdsBtns.length;i++){reportAdsBtns[i].addEventListener('click',function(e){var url='<iframe src="https://svc.ezoic.com/pub/reportads/reportads.html'+e.target.getAttribute('name')+'" width="400" height="500" style="border-radius: 10px; box-shadow: 2px 2px 30px 6px rgba(0,0,0,0.75); border: 1px solid black;"></iframe>'
+  uglipop({class:'none',source:'html',content:url,});});}
+  function bindEvent(element,eventName,eventHandler){if(element.addEventListener){element.addEventListener(eventName,eventHandler,false);}else if(element.attachEvent){element.attachEvent('on'+eventName,eventHandler);}}
+  bindEvent(window,'message',function(e){if(e.data==='close-report-ad-modal'){document.getElementById('uglipop_overlay_wrapper').style.display='none';document.getElementById('uglipop_overlay').style.display='none';document.getElementById('uglipop_content_fixed').style.display='none';}})}
+  return{init:init};})();ezRBA.init();</script>
+  <script type="text/javascript" data-cfasync="false"></script>
+  <script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+          var setCookie = function( name, content, expiry ) {
+              return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+          };
+          var ffid = 1;
+          var oh = window.screen.height;
+          var ow = window.screen.width;
+          var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+          var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+          var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+          var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+          setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+          setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+      })();</script><script type='text/javascript' style='display:none;' async>
+  </script> -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./dt/js/datepicker-full.js"></script>
+    <script src="./dt/js/live-demo.js"></script>
+  <!--   <script>
+      /*global $ initialize onChangeType onChnageDirection onChangeInputOption onChangeInputOption onChangeTextareaOption onClickCheckboxOptions switchPicker */
+      window.templates = {
+        input: `<div class="mb-3"><input type="text" class="form-control date"></div>`,
+        inline: `<div class="date mb-3"></div>`,
+        range: `<div class="input-group mb-3 date input-daterange">
+  <input type="text" name="range-start" class="form-control">
+  <span class="input-group-text">to</span>
+  <input type="text" name="range-end" class="form-control">
+</div>`,
+      };
+      window.beforeShowFns = {
+beforeShowDay(date) {
+  if (date.getMonth() == new Date().getMonth()) {
+    switch (date.getDate()) {
+      case 4:
+        return {
+          content: '<span data-bs-toggle="tooltip" title="Example tooltip">4</span>',
+          classes: 'bg-info'
+        };
+      case 8:
+        return false;
+      case 12:
+        return "text-success";
+    }
+  }
+},
+beforeShowMonth(date) {
+  switch (date.getMonth()) {
+    case 6:
+      if (date.getFullYear() === new Date().getFullYear()) {
+        return {content: '🎉'};
+      }
+      break;
+    case 8:
+      return false;
+  }
+},
+beforeShowYear(date) {
+  switch (date.getFullYear()) {
+    case 2017:
+      return false;
+    case 2020:
+      return {content: '<span data-bs-toggle="tooltip" data-placement="bottom" title="Tooltip text">2020</span>'};
+  }
+},
+beforeShowDecade(date) {
+  switch (date.getFullYear()) {
+    case 2000:
+      return false;
+    case 2100:
+      return {
+        content: '💯',
+        classes: 'bg-success',
+      };
+  }
+},
+      };
+      window.buttonClass = 'btn';
+      window.addError = function addError(el, message) {
+        el.classList.add('is-invalid');
+        el.parentElement.querySelector('.invalid-feedback').textContent = message;
+      }
+      window.removeErrors = function removeErrors(el) {
+        el.classList.remove('is-invalid');
+        el.parentElement.querySelector('.invalid-feedback').textContent = '';
+      }
+
+      initialize();
+
+      document.getElementById('types').querySelectorAll('input').forEach((el) => {
+        el.addEventListener('change', onChangeType);
+      });
+
+      document.getElementById('direction').querySelectorAll('input').forEach((el) => {
+        el.addEventListener('change', onChnageDirection);
+      });
+
+      const optsForm = document.getElementById('options');
+      optsForm.querySelectorAll('input[type=text], input[type=radio], select').forEach((el) => {
+        el.addEventListener('change', onChangeInputOption);
+      });
+      optsForm.querySelectorAll('textarea').forEach((el) => {
+        el.addEventListener('change', onChangeTextareaOption);
+      });
+      optsForm.querySelectorAll('input[type=checkbox]').forEach((el) => {
+        el.addEventListener('click', onClickCheckboxOptions);
+      });
+
+      switchPicker('input');
+
+      let tooltipElems = [];
+      const initTooltips = () => {
+        const elems = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        elems.forEach((el) => {
+          if (tooltipElems.includes(el)) {
+            return;
+          }
+          new bootstrap.Tooltip(el);
+        });
+        tooltipElems = [...elems];
+      };
+      setInterval(initTooltips, 1000);
+      initTooltips();
+    </script> -->
+  </body>
+</html>
