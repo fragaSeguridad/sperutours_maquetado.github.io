@@ -213,7 +213,7 @@
            <div class="col col-12">
              <div class="row">
              <div class="col col-9    mt-1">
-              <h2 > EX-PUNO003 </h2> 
+              <h2 >DETALLE DE : EX-PUNO003 </h2> 
               </div>
              
               </div>
@@ -230,11 +230,29 @@
              <div class="row g-0">
                <!-- SECCION - INICIO -->
                <div class="col-md-4 mt-2    ">
-                 <div class="card-title m-2 text-center"> <h6 class="card-title m-2"><b class="t-2">EX-PUNO003</b> - Salar de Uyuni. </h6></div>
+                 <div class="card-title m-2 text-center"> 
+                  <div class="form-floating">
+                    <input type="inbox" class="form-control" id="floatingPassword" placeholder="Nombre de la exursion" value="Salar de Uyuni.">
+                    <label for="floatingPassword">Título de la excursión : </label>
+                  </div>
+                </div>
                 
-                 <div class=" rounded p-2 text-light justify-content-center fw-bold text-center bg-primary"  >EXCURSION VARIOS DIAS</div>
+                 <div class=" rounded p-2 text-light justify-content-center fw-bold text-center bg-primary"  >
+
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>EXCURSION VARIOS DIAS</option>
+                    <option value="1">EXCURSION MEDIO DIA</option>
+                    <option value="2">EXCURSION FULL DAY</option> 
+                  </select>
+
+                 </div>
                  <div class="row   m-2">
-                 <img class="img img-fluid col-8 col-md-6 col-lg-8 mx-auto border-dark  rounded   " src="https://static.wixstatic.com/media/0f7791_f3d6d5a93821445ebbff8940a9af97e7~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_1000,h_667,al_c,q_90,usm_0.66_1.00_0.01/0f7791_f3d6d5a93821445ebbff8940a9af97e7~mv2_d_5184_3456_s_4_2.jpg"></img></div>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Seleccione una imagen representativa</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                 <img class="img img-fluid col-8 col-md-6 col-lg-8 mx-auto border-dark  rounded   " src="https://static.wixstatic.com/media/0f7791_f3d6d5a93821445ebbff8940a9af97e7~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_1000,h_667,al_c,q_90,usm_0.66_1.00_0.01/0f7791_f3d6d5a93821445ebbff8940a9af97e7~mv2_d_5184_3456_s_4_2.jpg"></img>
+                </div>
                </div>
              <!-- SECCION - FIN -->
              <!-- SECCION - INICIO -->
@@ -243,9 +261,8 @@
                    <!--
                    <h5 class="card-title">UBICACIÓN</h5>
                  -->
-                   <p class="card-text text-center m-2 ">
-                     <h6 class="text-primary">Estado : COMPLETO </h6>
-                      
+                   <p class="card-text  m-2 ">
+                     
          <table class="table mt-1">
           <!--   <thead>
               <tr>
@@ -256,30 +273,103 @@
             </thead> -->
             <tbody>
               <tr>
-                <th scope="row">Tiempo :</th>
-                <td>2 Días</td>
+                <th scope="row">Estado </th>
+                <td>:</td>
+                <td colspan="2">
+
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>CONSTRUCCION</option>
+                    <option value="1">COMPLETO</option>
+                    <option value="2">DISPONIBLE</option>
+                    <option value="3">NO DISPONIBLE </option>
+                  </select>
+
+                </td>
                  
               </tr>
               <tr>
-                <th scope="row">Dificultad :</th>
-                <td>Fácil</td>
+                <th scope="row">Tiempo </th>
+                <td>:</td>
+                <td>
+                  
+                  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" value="2" >
+                  
+                 
+                </td>
+                  <td>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>Días</option>
+                    <option value="1">Semanas</option>
+                    <option value="2">meses</option>
+                    <option value="3">horas</option>
+                  </select>
+                </td>
+                 
+              </tr>
+              <tr>
+                <th scope="row">Dificultad </th>
+                <td>:</td>
+                <td colspan="2">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Fácil</option>
+                    <option value="1">Moderado</option>
+                    <option value="2">Difícil</option>
+                    <option value="3">Muy difícil</option>
+                    <option value="3">Sólo expertos</option>
+                  </select>
+
+
+                </td>
+                 
+              </tr>
+          
+              
+              <tr>
+                <th scope="row">Distancia </th>
+                <td>:</td>
+                <td>
+                  
+                  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" value="720" >
+                  
+                 
+                </td>
+                  <td>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>km.</option>
+                    <option value="1">m.</option> 
+                  </select>
+                </td>
                  
               </tr>
           
               <tr>
-                <th scope="row">Distancia :</th>
-                <td>760 km</td>
+                <th scope="row">Altitud </th>
+                <td>:</td>
+                <td colspan="2"> 
+
+                  <div class="input-group mb-3 ">
+                     <div style="width: 35%;"  class="form-floating">
+                    <input  id="floatingMin" type="inbox" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" value="3827">
+                    <label for="floatingMin" class="d-none d-sm-inline">Mínimo </label>
+                  </div>
+                    <span class="input-group-text" id="basic-addon1">-</span>
+                    <div  style="width: 35%;" class="form-floating">
+                    <input   id="floatingMax"  type="inbox" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" value="3650 ">
+                    <label for="floatingMax" class="d-none d-sm-inline">Máxima </label>
+                  </div>
+                    <span class="input-group-text" id="basic-addon1">msnm</span>
+                  </div>
+
+                  
+
+
+                </td>
                  
               </tr>
           
               <tr>
-                <th scope="row">Altitud :</th>
-                <td>3827 - 3650 msnm</td>
-                 
-              </tr>
-          
-              <tr>
-                <th scope="row">ubicación :</th>
+                <th scope="row">ubicación </th>
+                <td>:</td>
                 <td>Puno – Bolivia (La Paz – Uyuni – Salar de Uyuni)</td>
                  
               </tr>
@@ -299,10 +389,8 @@
                    <div class="row"><h6 class="card-title text-bold text-black ">Descripción :</h6><br>
                     <small class="card-title text-black-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</small></div>
                   <div class="row d-grid gap-2">
-                    <button class="btn btn-success" type="button">VER DETALLES</button>
-                    <button class="btn btn-warning" type="button">EDITAR</button>
-                   <!--  <div class="col col-6 text-center"><button class="btn btn-success d-block large">EDITAR</button></div>
-                    <div class="col col-6 text-center"><button class="btn btn-warning">CLONAR</button></div> -->
+                    <button class="btn btn-success" type="button">GUARDAR</button>
+                    
                   </div>
 
                 
