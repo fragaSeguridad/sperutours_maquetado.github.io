@@ -11,6 +11,15 @@
   <!--  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />-->
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+    
+    <!-- summernote - inicio -->
+    <script src="./summernote/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <link href="./summernote/summernote-lite.min.css" rel="stylesheet">
+    <script src="./summernote/summernote-lite.min.js"></script>
+    <!-- summernote - fin -->
+
 </head>
 
 <body ><!--class="sb-nav-fixed"-->
@@ -386,9 +395,36 @@
              <!-- SECCION - INICIO -->
                <div class="col-md-4">
                  <div class="card-body">
-                   <div class="row"><h6 class="card-title text-bold text-black ">Descripción :</h6><br>
-                    <small class="card-title text-black-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</small></div>
-                  <div class="row d-grid gap-2">
+                   <div class="row">
+                     
+                     
+                  
+                    <div >
+                      <!-- class="col col-12 col-sm-6 my-1 "-->
+                      <h6 class="card-title text-bold text-black ">Descripción :</h6><br>
+                       <input  id="summernote"  type="text" class="form-control" placeholder=""  >
+                       <script>
+                         $('#summernote').summernote({
+                           placeholder: 'Descripción Corta',
+                           tabsize: 2,
+                           height: 120,
+                           toolbar: [
+                            // ['style', ['style']],
+                             ['font', ['bold', 'underline', 'clear']],
+                            // ['color', ['color']],
+                             ['para', ['ul', 'ol', 'paragraph']],
+                            // ['table', ['table']],
+                            // ['insert', ['link', 'picture', 'video']],
+                            // ['view', ['fullscreen', 'codeview', 'help']]
+                           ]
+                         });
+                       </script>
+                 
+                     </div>
+                  
+                  
+                  </div>
+                  <div class="row d-grid gap-2 mt-2">
                     <button class="btn btn-success" type="button">GUARDAR</button>
                     
                   </div>
